@@ -22,8 +22,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
         }
     }
@@ -52,10 +51,15 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     // Neumorphism
-    implementation ("com.github.fornewid:neumorphism:0.3.2")
-//Lottie Animation
+    implementation("com.github.fornewid:neumorphism:0.3.2")
+    //Lottie Animation
     val lottieVersion = "6.4.0"
-    implementation ("com.airbnb.android:lottie:$lottieVersion")
+    implementation("com.airbnb.android:lottie:$lottieVersion")
 
+    val retrofitVersion = "2.11.0"
+    // GSON converter
+    implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
+    // retrofit
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
 
 }
